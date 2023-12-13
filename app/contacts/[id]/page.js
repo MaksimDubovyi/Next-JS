@@ -3,7 +3,8 @@ import Image from 'next/image'
 import style from './styles.module.css'
 
  async function getContacts(id) {
-
+try
+{
     const response = await fetch(`http://localhost:3000/api/contacts/?contact=${id}`, {
         next: {
             revalidate: 250
@@ -14,6 +15,11 @@ import style from './styles.module.css'
     }
  
     return response.json();
+}
+catch{
+    return null
+}
+  
 }
 
 export async function generateMetadata({ params: { id } }) {
