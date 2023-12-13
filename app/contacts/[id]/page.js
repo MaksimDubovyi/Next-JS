@@ -5,7 +5,7 @@ import style from './styles.module.css'
  async function getContacts(id) {
 try
 {
-    const response = await fetch(`http://localhost:3000/api/contacts/?contact=${id}`, {
+    const response = await fetch(`https://next-js-one-henna.vercel.app/api/contacts/?contact=${id}`, {
         next: {
             revalidate: 250
         }

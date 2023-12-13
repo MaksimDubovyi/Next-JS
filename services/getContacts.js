@@ -1,7 +1,7 @@
 export const getContacts = async () =>{
 
     try{
-        const response = await fetch('http://localhost:3000/api/contacts',{
+        const response = await fetch('https://next-js-one-henna.vercel.app/api/contacts',{
             next:{
                 revalidate:250
             }
@@ -20,7 +20,7 @@ export const getContacts = async () =>{
 export const getContactsBySearch = async (search) =>{
 
     try{
-        const response = await fetch(`http://localhost:3000/api/contacts?search=${search}`,{
+        const response = await fetch(`https://next-js-one-henna.vercel.app/api/contacts?search=${search}`,{
             next:{
                 revalidate:250
             }
