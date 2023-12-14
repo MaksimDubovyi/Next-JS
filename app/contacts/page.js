@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import {getContacts} from '@/services/getContacts'
 import ContactsList from "../components/ContactsList";
 import {ContactSearch} from "../components/ContactSearch";
+import { Container } from "@material-ui/core";
 
 
 
@@ -19,13 +20,10 @@ useEffect(()=>{
 },[]);
 
 return(
-    <div className='container'>
-    <h1>Contacts</h1>
+    <Container>
+        <h1>Contacts</h1>
         <ContactSearch onSearch={setContacts}/>
         <ContactsList contacts={contacts}/>
-   
-
-
-    </div>
+    </Container>
 )
 }

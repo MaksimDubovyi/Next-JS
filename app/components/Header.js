@@ -1,4 +1,4 @@
-
+"use client";
 import { Navigation } from "./Navigation"
 
 
@@ -11,9 +11,9 @@ const navigation =[
 
 const Header = () =>{
     return(
-        <header >
-            <Navigation navLinks={navigation}/>
-        </header>
+        
+        <Navigation navLinks={navigation}/>
     )
 }
 export{Header}
+
