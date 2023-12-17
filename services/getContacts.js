@@ -1,11 +1,11 @@
 
 
 const URL1='https://next-js-one-henna.vercel.app';
-//const URL2='http://localhost:3000';
+const URL2='http://localhost:3000';
 export const getContacts = async () =>{
 
     try{
-        const response = await fetch(URL1+'/api/contacts',{
+        const response = await fetch(URL2+'/api/contacts',{
             next:{
                 revalidate:250
             }
@@ -24,7 +24,7 @@ export const getContacts = async () =>{
 export const getContactsBySearch = async (search) =>{
 
     try{
-        const response = await fetch(URL1+`/api/contacts?search=${search}`,{
+        const response = await fetch(URL2+`/api/contacts?search=${search}`,{
             next:{
                 revalidate:250
             }
@@ -43,7 +43,7 @@ export const getContactsBySearch = async (search) =>{
 export  const getContactsId = async (id)=> {
     try
     {
-        const response = await fetch(URL1+`/api/contacts/?contact=${id}`, {
+        const response = await fetch(URL2+`/api/contacts/?contact=${id}`, {
             next: {
                 revalidate: 250
             }

@@ -61,6 +61,6 @@ main{
 
 /* Круглий скролбар */
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(65, 13, 209);
+  background-color: rgb(18, 151, 40);
   border-radius: 50px; /* Зробити скролбар круглим */
 }
